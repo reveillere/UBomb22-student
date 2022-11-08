@@ -67,6 +67,7 @@ public final class GameEngine {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.sizeToScene();
+        stage.hide();
         stage.show();
 
         input = new Input(scene);
