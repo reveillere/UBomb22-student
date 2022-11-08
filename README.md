@@ -6,6 +6,10 @@
 Réalisation d'un jeu vidéo 2D : **UBomb**.
 
 
+## INFO du 08/11/2022 
+
+Il y a un bug sur les machines Linux du CREMI exclusivement qui empêche la taille de la fenêtre de s'ajuster automatiquement à la taille de la carte. Pour y remédier dans l'immédiat, remplacer `stage.setResizable(false);` par `stage.setResizable(true);` dans la méthode `initialize` de la classe `GameEngine`.
+
 ## Principes du jeu
 
 Une princesse est détenue prisonnière par de méchants monstres verts. Votre mission, si vous l'acceptez, est d'aller la délivrer. Pour cela, vous devrez traverser plusieurs mondes, plus effrayants les uns que les autres. Des portes vous permettront de passer de monde en monde. Certaines portes seront fermées à clé et nécessiteront d'avoir une clé dans votre inventaire. Vous êtes un expert en explosif et utiliserez vos bombes pour détruire les obstacles devant vous et tuer les monstres qui vous attaqueront.
