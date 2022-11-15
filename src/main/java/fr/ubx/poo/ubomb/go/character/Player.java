@@ -11,6 +11,7 @@ import fr.ubx.poo.ubomb.game.Position;
 import fr.ubx.poo.ubomb.go.GameObject;
 import fr.ubx.poo.ubomb.go.Movable;
 import fr.ubx.poo.ubomb.go.TakeVisitor;
+import fr.ubx.poo.ubomb.go.decor.Decor;
 import fr.ubx.poo.ubomb.go.decor.bonus.*;
 
 public class Player extends GameObject implements Movable, TakeVisitor {
@@ -34,9 +35,9 @@ public class Player extends GameObject implements Movable, TakeVisitor {
     public void doMove(Direction direction) {
         // This method is called only if the move is possible, do not check again
         Position nextPos = direction.nextPosition(getPosition());
-        GameObject next = game.grid().get(nextPos);
-        if (next instanceof Takeable takeable) {
-                takeable.takenBy(this);
+        Decor next = game.grid().get(nextPos);
+        if (next != null) {
+            next.takenBy(this);
         }
         setPosition(nextPos);
     }
