@@ -129,6 +129,10 @@ Properties config = new Properties();;
 Reader in = new FileReader(file);
 config.load(in);
 boolean compression = Boolean.parseBoolean(integerProperty(config, "compression", "false"));
+
+private int integerProperty(Properties config, String name, int defaultValue) {
+    return Integer.parseInt(config.getProperty(name, Integer.toString(defaultValue)));
+}
 ```
 
 Comme vous pouvez le constater, certaines clés peuvent avoir des valeurs par défaut si elles ne sont pas présentes dans le fichier. Nous utiliserons les valeurs par défaut suivantes :
