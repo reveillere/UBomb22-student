@@ -135,16 +135,16 @@ de facilement stocker des couples de clés/valeurs.
 Voici un exemple de code pour lire la valeur correspondant à la clé `compression` dans le fichier `sample.properties`.
 
 ```java
-private int integerProperty(Properties config, String name, int defaultValue) {
-    return Integer.parseInt(config.getProperty(name, Integer.toString(defaultValue)));
-}
+  private boolean booleanProperty(Properties config, String name, boolean defaultValue) {
+        return Boolean.parseBoolean(config.getProperty(name, Boolean.toString(defaultValue)));
+    }
 ```
 
 ```java
 Properties config = new Properties();;
 Reader in = new FileReader(file);
 config.load(in);
-boolean compression = Boolean.parseBoolean(integerProperty(config, "compression", "false"));
+boolean compression = booleanProperty(config, "compression", false);
 ```
 
 Comme vous pouvez le constater, certaines clés peuvent avoir des valeurs par défaut si elles ne sont pas présentes dans
