@@ -5,8 +5,9 @@
 package fr.ubx.poo.ubomb.view;
 
 import fr.ubx.poo.ubomb.go.GameObject;
-import fr.ubx.poo.ubomb.go.decor.bonus.*;
-import fr.ubx.poo.ubomb.go.decor.*;
+import fr.ubx.poo.ubomb.go.decor.Stone;
+import fr.ubx.poo.ubomb.go.decor.Tree;
+import fr.ubx.poo.ubomb.go.decor.bonus.Key;
 import javafx.scene.layout.Pane;
 
 import static fr.ubx.poo.ubomb.view.ImageResource.*;

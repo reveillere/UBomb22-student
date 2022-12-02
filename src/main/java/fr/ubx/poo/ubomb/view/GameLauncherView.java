@@ -3,8 +3,10 @@ package fr.ubx.poo.ubomb.view;
 import fr.ubx.poo.ubomb.engine.GameEngine;
 import fr.ubx.poo.ubomb.game.Game;
 import fr.ubx.poo.ubomb.launcher.GameLauncher;
-import fr.ubx.poo.ubomb.launcher.MapLevel;
-import javafx.scene.control.*;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -12,12 +14,12 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.File;
 
 public class GameLauncherView extends BorderPane {
     private final FileChooser fileChooser = new FileChooser();
 
-    public GameLauncherView(Stage stage)  {
+    public GameLauncherView(Stage stage) {
         // Create menu
         MenuBar menuBar = new MenuBar();
         Menu menuFile = new Menu("File");

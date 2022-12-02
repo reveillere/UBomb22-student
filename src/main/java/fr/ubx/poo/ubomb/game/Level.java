@@ -1,11 +1,15 @@
 package fr.ubx.poo.ubomb.game;
 
-import fr.ubx.poo.ubomb.go.decor.bonus.*;
-import fr.ubx.poo.ubomb.go.decor.*;
+import fr.ubx.poo.ubomb.go.decor.Decor;
+import fr.ubx.poo.ubomb.go.decor.Stone;
+import fr.ubx.poo.ubomb.go.decor.Tree;
+import fr.ubx.poo.ubomb.go.decor.bonus.Key;
 import fr.ubx.poo.ubomb.launcher.Entity;
 import fr.ubx.poo.ubomb.launcher.MapLevel;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Level implements Grid {
 
@@ -37,7 +41,8 @@ public class Level implements Grid {
                     case Key:
                         elements.put(position, new Key(position));
                         break;
-                    case Empty: break;
+                    case Empty:
+                        break;
                     default:
                         throw new RuntimeException("EntityCode " + entity.name() + " not processed");
                 }
