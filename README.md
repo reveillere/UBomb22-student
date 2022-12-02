@@ -222,7 +222,7 @@ partie.
 ## Gestion des vies
 
 Le joueur peut perdre une vie s’il se trouve sur une case à portée de l’explosion d’une bombe ou s'il croise un monstre.
-Le joueur bénéficie alors d’une temporisation de *playerInvisibilityTime* ms pendant laquelle il est invulnérable. Si le joueur n’a plus
+Le joueur bénéficie alors d’une temporisation de *playerInviciilityTime* ms pendant laquelle il est invulnérable. Si le joueur n’a plus
 de vie, la partie se termine.
 
 ## Gestion des monstres
@@ -245,5 +245,5 @@ tout pour la garder prisonnière. La touche `[ESCAPE]` permet de quitter la part
 - Faire en sorte que la vitesse de déplacement des monstres soit faible dans les premiers niveaux et augmente plus on se
   rapproche de la princesse.
 - Faire en sorte que les monstres possèdent une vie supplémentaire tous les 2 niveaux (2 vies à partir du niveau 2, 3
-  vies à partir du niveau 4, …)  Il n'est pas demandé d'afficher les vies restantes d'un monstre. Lorsqu'un joueur perd une vie, il devient invincible pendant un temps (en ms) défini par le paramètre de configuration *monsterInvisibilityTime*. 
+  vies à partir du niveau 4, …)  Il n'est pas demandé d'afficher les vies restantes d'un monstre. Lorsqu'un joueur perd une vie, il devient invincible pendant un temps (en ms) défini par le paramètre de configuration *monsterInvincibilityTime*. 
 - Faire en sorte que les monstres du dernier niveau se dirigent vers le joueur et non plus de manière aléatoire.
